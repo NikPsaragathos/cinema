@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48952dbc-da8f-42dd-91f8-99f3c1ec192e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="48952dbc-da8f-42dd-91f8-99f3c1ec192e" name="Default" comment="-minor bug fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +93,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tutorial" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cinema (2)/cinema" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -154,8 +153,21 @@
       <workItem from="1620490853541" duration="8301000" />
       <workItem from="1620502867160" duration="854000" />
       <workItem from="1620503746906" duration="1556000" />
-      <workItem from="1620579698153" duration="455000" />
+      <workItem from="1620579698153" duration="543000" />
+      <workItem from="1620580653178" duration="13000" />
+      <workItem from="1620581578794" duration="496000" />
+      <workItem from="1620657691780" duration="164000" />
+      <workItem from="1620757857427" duration="229000" />
+      <workItem from="1620819990245" duration="346000" />
     </task>
+    <task id="LOCAL-00001" summary="-minor bug fixed">
+      <created>1620580237199</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620580237199</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -199,6 +211,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="-minor bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="-minor bug fixed" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/movies/views.py">
