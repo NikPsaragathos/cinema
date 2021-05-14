@@ -15,6 +15,9 @@ from rest_framework import filters
 from django_filters import rest_framework as filters
 from rest_framework import filters
 import django_filters
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from .resources import MovieResource
 
 
 
@@ -61,7 +64,16 @@ class MovieList(generics.ListCreateAPIView):
 def perform_create(self, serializer):
     serializer.save( owner=self.request.user )
 
-
+def export(request):
+    movie_resource = MovieResource
+    dataset = movie_resource.export()
+    #response = HttpResponse(dataset.csv, content_type='text/csv')
+    #response['Content-Disposition'] = 'attachment; filename="movie.csv"'
+    #response = HttpResponse(dataset.json, content_type='application/json')
+    #response['Content-Disposition'] = 'attachment; filename="movie.json"'
+    response = HttpResponse(dataset.xls, content_type='application/vnd.ms-excel')
+    response['Content-Disposition'] = 'attachment; filename="persons.xls"'
+    return response
 
 
 class MovieDetail(generics.RetrieveUpdateDestroyAPIView):
