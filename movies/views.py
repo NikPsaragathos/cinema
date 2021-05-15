@@ -7,7 +7,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from movies.models import movie
 # Create your views here.
-from rest_framework import permissions, generics, status
+from rest_framework import permissions, generics, status, fields
 from movies.models import movie
 from movies.permissions import IsOwnerOrReadOnly
 from movies.serializers import MovieSerializer, UserSerializer
@@ -18,19 +18,34 @@ import django_filters
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .resources import MovieResource
+#from rest_framework.filters import BaseFilterBackend
 
+
+#class LimitFilterBackend(BaseFilterBackend):
+#    def filter_queryset(self, request, queryset, view):
+#        limit = request.query_params.get('limit', None)
+#        if (limit is not None):
+#            try:
+#                return queryset[:int(limit)]
+#            except:
+#                return queryset
+#       return queryset
 
 
 class MovieFilter(django_filters.FilterSet):
-    title = django_filters.CharFilter( field_name="title",label=" ΤΙΤΛΟΣ", lookup_expr='icontains')
+    title = django_filters.CharFilter( field_name="title",label="ΤΙΤΛΟΣ", lookup_expr='icontains')
     categoryId =django_filters.NumberFilter( field_name='categoryId',label="ΚΑΤΗΓΟΡΙΑ", lookup_expr='gte')
     viewDate= django_filters.NumberFilter( field_name='viewDate', label="ΗΜΕΡΟΜΗΝΙΑ ΠΡΟΒΟΛΗΣ", lookup_expr='exact')
     timeId = django_filters.NumberFilter( field_name='timeId', label="ΩΡΑ ΠΡΟΒΟΛΗΣ", lookup_expr='exact')
     priceId = django_filters.NumberFilter( field_name='priceId', label="ΤΙΜΗ ΕΙΣΗΤΗΡΙΟΥ", lookup_expr='exact')
 
+    ordering = filters.OrderingFilter
+    ordering = ['title', 'categoryId']
+
+
 class Meta:
      model = movie
-     fields = [ 'title', 'director', 'actor', 'categoryId', 'imbdUrl', 'coverUrl', 'viewDate', 'timeId', 'priceId', 'description', 'trailer', 'owner']
+     fields = ['title', 'director', 'actor', 'categoryId', 'imbdUrl', 'coverUrl', 'viewDate', 'timeId', 'priceId', 'description', 'trailer', 'owner']
 
 
 

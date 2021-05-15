@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48952dbc-da8f-42dd-91f8-99f3c1ec192e" name="Default" comment="- Import Export capability added">
+    <list default="true" id="48952dbc-da8f-42dd-91f8-99f3c1ec192e" name="Default" comment="- Movie Database updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +162,9 @@
       <workItem from="1620934262405" duration="1473000" />
       <workItem from="1620973174792" duration="7864000" />
       <workItem from="1620984256188" duration="612000" />
+      <workItem from="1621017374981" duration="165000" />
+      <workItem from="1621063693266" duration="5000" />
+      <workItem from="1621080930642" duration="1641000" />
     </task>
     <task id="LOCAL-00001" summary="search ordering fields">
       <created>1620817016099</created>
@@ -177,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620982923495</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Movie Database updated">
+      <created>1621017484607</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621017484607</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -228,7 +238,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="search ordering fields" />
     <MESSAGE value="- Import Export capability added" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Import Export capability added" />
+    <MESSAGE value="- Movie Database updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Movie Database updated" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/movies/permissions.py" />
