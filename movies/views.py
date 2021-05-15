@@ -33,11 +33,17 @@ from .resources import MovieResource
 
 
 class MovieFilter(django_filters.FilterSet):
-    title = django_filters.CharFilter( field_name="title",label="ΤΙΤΛΟΣ", lookup_expr='icontains')
-    categoryId =django_filters.NumberFilter( field_name='categoryId',label="ΚΑΤΗΓΟΡΙΑ", lookup_expr='gte')
-    viewDate= django_filters.NumberFilter( field_name='viewDate', label="ΗΜΕΡΟΜΗΝΙΑ ΠΡΟΒΟΛΗΣ", lookup_expr='exact')
-    timeId = django_filters.NumberFilter( field_name='timeId', label="ΩΡΑ ΠΡΟΒΟΛΗΣ", lookup_expr='exact')
-    priceId = django_filters.NumberFilter( field_name='priceId', label="ΤΙΜΗ ΕΙΣΗΤΗΡΙΟΥ", lookup_expr='exact')
+    #title = django_filters.CharFilter(field_name="title",label="ΤΙΤΛΟΣ", lookup_expr='icontains')
+    #categoryId =django_filters.NumberFilter(field_name='categoryId',label="ΚΑΤΗΓΟΡΙΑ", lookup_expr='gte')
+    #viewDate= django_filters.NumberFilter(field_name='viewDate', label="ΗΜΕΡΟΜΗΝΙΑ ΠΡΟΒΟΛΗΣ", lookup_expr='exact')
+    #timeId = django_filters.NumberFilter(field_name='timeId', label="ΩΡΑ ΠΡΟΒΟΛΗΣ", lookup_expr='exact')
+    #priceId = django_filters.NumberFilter(field_name='priceId', label="ΤΙΜΗ ΕΙΣΗΤΗΡΙΟΥ", lookup_expr='exact')
+
+    title = django_filters.CharFilter(field_name="title", lookup_expr='icontains')
+    categoryId = django_filters.NumberFilter(field_name='categoryId', lookup_expr='exact')
+    viewDate = django_filters.NumberFilter(field_name='viewDate', lookup_expr='exact')
+    timeId = django_filters.NumberFilter(field_name='timeId', lookup_expr='exact')
+    priceId = django_filters.NumberFilter(field_name='priceId', lookup_expr='exact')
 
     ordering = filters.OrderingFilter
     ordering = ['title', 'categoryId']
@@ -67,7 +73,7 @@ class MovieList(generics.ListCreateAPIView):
     # permissions to authenticated users.
     # --------------------------------------------------------------------
 
-    filter_class= MovieFilter
+    filter_class = MovieFilter
     filter_backends = (DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter)
     filter_fields = (['title', 'categoryId', 'viewDate', 'timeId', 'priceId'])
     search_fields = ['title', 'categoryId', 'viewDate', 'timeId', 'priceId']
@@ -77,7 +83,7 @@ class MovieList(generics.ListCreateAPIView):
 
 #Override την default μέθοδο create the class and store in the field owner the user who wasn't register
 def perform_create(self, serializer):
-    serializer.save( owner=self.request.user )
+    serializer.save(owner=self.request.user)
 
 def export(request):
     movie_resource = MovieResource

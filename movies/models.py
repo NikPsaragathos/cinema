@@ -1,6 +1,6 @@
 from django.db import models
 from datetime import date
-
+from datetime import datetime
 
 
 MOVIE_CATEGORIES = [(0,"ALL"), (1,"Δράσης"),(2,"Επιστημονικής Φαντασίας"), (3,"Δραματική"),(4,"Ρομαντική"), (5,"Ιστορική"),(6,"Βιογραφική")]

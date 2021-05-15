@@ -1,5 +1,6 @@
 from import_export import resources
 from .models import movie
+from import_export import widgets
 
 class MovieResource(resources.ModelResource):
     #delete = fields.Field(widget=widgets.BooleanWidget())
@@ -11,6 +12,6 @@ class MovieResource(resources.ModelResource):
     class Meta:
         model = movie # default all fields
         #field = ( 'title', 'director', 'actor', 'categoryId', 'imbdUrl', 'coverUrl', 'viewDate', 'timeId', 'priceId', 'description', 'trailer', 'owner') #custom fields
-        #widgets = {
-        #    'published': {'format': '%d.%m.%Y'},
-        #}
+        widget = {
+            'viewDate': {'format': '%d-%m-%Y'},
+        }
