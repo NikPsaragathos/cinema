@@ -41,10 +41,11 @@ class MovieFilter(django_filters.FilterSet):
 
     title = django_filters.CharFilter(field_name="title", lookup_expr='icontains')
     categoryId = django_filters.NumberFilter(field_name='categoryId', lookup_expr='exact')
-    viewDate = django_filters.NumberFilter(field_name='viewDate', lookup_expr='exact')
+    viewDate = django_filters.DateFilter(field_name='viewDate', lookup_expr='exact')
     timeId = django_filters.NumberFilter(field_name='timeId', lookup_expr='exact')
     priceId = django_filters.NumberFilter(field_name='priceId', lookup_expr='exact')
 
+    #Filter ordrering
     ordering = filters.OrderingFilter
     ordering = ['title', 'categoryId']
 
