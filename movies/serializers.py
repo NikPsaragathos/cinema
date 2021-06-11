@@ -1,4 +1,4 @@
-from rest_framework import serializers
+from rest_framework import serializers, generics
 from movies.models import movie,MOVIE_CATEGORIES, TIME_CHOICES, PRICE_CHOICES
 from django.contrib.auth.models import User
 from datetime import datetime
@@ -16,6 +16,7 @@ class MovieSerializer(serializers.ModelSerializer):
 # --------------------------------------------------------------------
 # User Serializer
 # --------------------------------------------------------------------
+
 class UserSerializer(serializers.ModelSerializer):
     movies = serializers.PrimaryKeyRelatedField(many=True, queryset=movie.objects.all())
     class Meta:
@@ -24,5 +25,13 @@ class UserSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         representation = super(UserSerializer, self).to_representation(instance)
-        representation['viewDateq'] = instance.created_at.strftime("%d-%m-%Y")
+        #representation['viewDateq'] = instance.created_at.strftime("%d-%m-%Y")
         return representation
+
+class UserList(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class UserDetail(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

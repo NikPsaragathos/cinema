@@ -33,11 +33,6 @@ from .resources import MovieResource
 
 
 class MovieFilter(django_filters.FilterSet):
-    #title = django_filters.CharFilter(field_name="title",label="ΤΙΤΛΟΣ", lookup_expr='icontains')
-    #categoryId =django_filters.NumberFilter(field_name='categoryId',label="ΚΑΤΗΓΟΡΙΑ", lookup_expr='gte')
-    #viewDate= django_filters.NumberFilter(field_name='viewDate', label="ΗΜΕΡΟΜΗΝΙΑ ΠΡΟΒΟΛΗΣ", lookup_expr='exact')
-    #timeId = django_filters.NumberFilter(field_name='timeId', label="ΩΡΑ ΠΡΟΒΟΛΗΣ", lookup_expr='exact')
-    #priceId = django_filters.NumberFilter(field_name='priceId', label="ΤΙΜΗ ΕΙΣΗΤΗΡΙΟΥ", lookup_expr='exact')
 
     title = django_filters.CharFilter(field_name="title", lookup_expr='icontains')
     categoryId = django_filters.NumberFilter(field_name='categoryId', lookup_expr='exact')
