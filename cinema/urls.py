@@ -20,7 +20,6 @@ urlpatterns = format_suffix_patterns(urlpatterns)
 
 urlpatterns += [
     path('api-auth/', include('rest_framework.urls')),
-    #path('admin/', admin.site.urls),
     url(r'^export-exl/$', views.export, name='export'),
     url(r'^export-csv/$', views.export, name='export'),
 ]

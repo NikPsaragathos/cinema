@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48952dbc-da8f-42dd-91f8-99f3c1ec192e" name="Default" comment="- Filters Date Bug Fixed">
+    <list default="true" id="48952dbc-da8f-42dd-91f8-99f3c1ec192e" name="Default" comment="- minnor bug fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +172,13 @@
       <workItem from="1621097756755" duration="787000" />
       <workItem from="1623304116513" duration="242000" />
       <workItem from="1623304568758" duration="6068000" />
-      <workItem from="1623442598372" duration="668000" />
+      <workItem from="1623442598372" duration="958000" />
+      <workItem from="1623443607222" duration="52000" />
+      <workItem from="1623443936756" duration="444000" />
+      <workItem from="1623518476971" duration="978000" />
+      <workItem from="1623564327520" duration="1079000" />
+      <workItem from="1623686789142" duration="1238000" />
+      <workItem from="1623693574271" duration="1095000" />
     </task>
     <task id="LOCAL-00001" summary="search ordering fields">
       <created>1620817016099</created>
@@ -208,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621098422212</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- minnor bug fixed">
+      <created>1623443530942</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623443530942</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -259,7 +273,8 @@
     <MESSAGE value="- Movie Database updated" />
     <MESSAGE value="- Filters Bug Fixed" />
     <MESSAGE value="- Filters Date Bug Fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Filters Date Bug Fixed" />
+    <MESSAGE value="- minnor bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="- minnor bug fixed" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/movies/permissions.py" />

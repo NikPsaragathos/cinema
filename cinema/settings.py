@@ -115,7 +115,7 @@ TIME_ZONE = 'Europe/Athens'
 
 DATE_FORMAT = '%d-%m-%Y'
 
-DATE_INPUT_FORMATS = '%d-%m-%Y'
+#DATE_INPUT_FORMATS = '%d-%m-%Y'
 
 USE_I18N = True
 
@@ -134,8 +134,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
-    'DATETIME_INPUT_FORMATS': ['%d-%m-%Y', ],
-    'DATETIME_FORMAT': '%d-%m-%Y',
+    #'DATETIME_INPUT_FORMATS': ['%d-%m-%Y', ],
+    #'DATETIME_FORMAT': '%d-%m-%Y',
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
